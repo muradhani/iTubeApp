@@ -65,7 +65,9 @@ public class HomeFragment extends Fragment implements HomeFragmentViewModel.AddP
         bindning.myPlayListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_authoraziationFragment_to_registerFragment);
+                Bundle bundle = new Bundle();
+                bundle.putInt("id", UserId);
+                navController.navigate(R.id.action_homeFragment_to_playlistsFragment,bundle);
             }
         });
     }
