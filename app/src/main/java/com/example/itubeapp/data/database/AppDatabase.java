@@ -1,18 +1,21 @@
 package com.example.itubeapp.data.database;
 
 import androidx.room.Database;
+import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.itubeapp.converter.Converters;
 import com.example.itubeapp.dao.UserDao;
 import com.example.itubeapp.data.roomEntity.User;
 
 import android.content.Context;
 
 import androidx.room.Database;
-import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
 @Database(entities = {User.class}, version = 1)
+@TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;
 

@@ -8,18 +8,19 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/_50sdp">
 
         <EditText
-            android:id="@+id/edTextEmailLogin"
+            android:id="@+id/edTextUserNameLogin"
             android:layout_width="0dp"
             android:layout_height="@dimen/_40sdp"
-            android:hint="Email"
+            android:hint="UserName"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/edTextEPasswordLogin"/>
 
         <EditText
             android:id="@+id/edTextEPasswordLogin"
@@ -30,7 +31,8 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edTextEmailLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/edTextUserNameLogin"
+            app:layout_constraintBottom_toTopOf="@+id/loginBtn"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -40,12 +42,15 @@
             android:text="Login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edTextEPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/edTextEPasswordLogin"
+            app:layout_constraintBottom_toTopOf="@+id/ResisterBtn"/>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ResisterBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="SIGN UP"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
