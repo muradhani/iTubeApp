@@ -1,5 +1,6 @@
 package com.example.itubeapp.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,9 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.example.itubeapp.data.database.AppDatabase;
 import com.example.itubeapp.databinding.FragmentHomeBinding;
 import com.example.itubeapp.R;
 import com.example.itubeapp.databinding.FragmentRegisterBinding;
@@ -17,7 +21,7 @@ import com.example.itubeapp.ui.viewModels.HomeFragmentViewModel;
 import com.example.itubeapp.ui.viewModels.RegisterFragmentViewModel;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomeFragmentViewModel.AddPlaylistListener {
     public FragmentHomeBinding bindning ;
     private HomeFragmentViewModel viewModel;
     NavController navController;
@@ -27,7 +31,7 @@ public class HomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(HomeFragmentViewModel.class);
-        viewModel.initaiteDatabae(getContext());
+        viewModel.initaiteDatabae(getContext(),this);
         UserId = getArguments().getInt("id");
     }
 
@@ -54,7 +58,8 @@ public class HomeFragment extends Fragment {
         bindning.addToPlayListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_authoraziationFragment_to_registerFragment);
+                String videoUrl = bindning.edVideoUrl.getText().toString();
+                viewModel.addPlaylistLink(UserId,videoUrl);
             }
         });
         bindning.myPlayListBtn.setOnClickListener(new View.OnClickListener() {
@@ -63,5 +68,11 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.action_authoraziationFragment_to_registerFragment);
             }
         });
+    }
+
+    @Override
+    public void onPlaylistAdded() {
+        Toast.makeText(requireContext(),"Link added",Toast.LENGTH_SHORT).show();
+
     }
 }

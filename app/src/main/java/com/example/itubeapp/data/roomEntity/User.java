@@ -12,14 +12,12 @@ public class User {
     private String fullName;
     private String username;
     private String password;
-    private List<String> playlists;
 
     // Constructor
-    public User(String fullName, String username, String password, List<String> playlists) {
+    public User(String fullName, String username, String password) {
         this.fullName = fullName;
         this.username = username;
         this.password = password;
-        this.playlists = playlists;
     }
 
     // Getters and setters
@@ -53,13 +51,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<String> getPlaylists() {
-        return playlists;
-    }
-
-    public void setPlaylists(List<String> playlists) {
-        this.playlists = playlists;
     }
 }

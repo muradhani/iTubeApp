@@ -27,7 +27,7 @@ public class RegisterFragmentViewModel extends ViewModel {
         @Override
         protected Void doInBackground(String... params) {
             // Create a new User object
-            User user = new User(params[0], params[1], params[2], null); // Assuming playlists is initially null
+            User user = new User(params[0], params[1], params[2]); // Assuming playlists is initially null
 
             // Insert the new user into the database
             userDao.insertUser(user);

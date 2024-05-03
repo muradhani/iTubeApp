@@ -3,7 +3,9 @@ package com.example.itubeapp.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
+import com.example.itubeapp.data.roomEntity.Playlist;
 import com.example.itubeapp.data.roomEntity.User;
 
 import java.util.List;
@@ -19,9 +21,9 @@ public interface UserDao {
     @Insert
     void insertUser(User user);
 
-    @Query("UPDATE users SET playlists = :playlistLink WHERE username = :username")
-    void addPlaylistLink(String username, String playlistLink);
+    @Query("UPDATE users SET fullName = :fullName, username = :username, password = :password WHERE id = :userId")
+    void updateUser(int userId, String fullName, String username, String password);
 
-    @Query("SELECT playlists FROM users WHERE id = :userId")
-    String getPlaylistLinkByUsername(Integer userId);
+    @Query("DELETE FROM users WHERE id = :userId")
+    void deleteUser(int userId);
 }
