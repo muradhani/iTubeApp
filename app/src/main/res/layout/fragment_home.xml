@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="@dimen/_30sdp">
 
         <EditText
-            android:id="@+id/edTextEPasswordLogin"
+            android:id="@+id/edVideoUrl"
             android:layout_width="0dp"
             android:layout_height="@dimen/_40sdp"
             android:hint="Youtube URL"
@@ -31,7 +31,7 @@
             android:text="PLAY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edTextEPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@+id/edVideoUrl"
             app:layout_constraintBottom_toTopOf="@+id/add_to_playList_btn"/>
 
         <androidx.appcompat.widget.AppCompatButton

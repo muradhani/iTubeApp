@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         // Get the NavHostFragment using the ID from the layout
