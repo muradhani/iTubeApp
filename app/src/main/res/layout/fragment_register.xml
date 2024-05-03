@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment"
+        android:layout_marginHorizontal="@dimen/_30sdp">
+
+        <EditText
+            android:id="@+id/fullName_ed"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="FULL NAME"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/UserName_btn"/>
+
+        <EditText
+            android:id="@+id/UserName_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="USER NAME"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullName_ed"
+            app:layout_constraintBottom_toTopOf="@+id/password_ed"/>
+
+        <EditText
+            android:id="@+id/password_ed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserName_btn"
+            app:layout_constraintBottom_toTopOf="@+id/confirm_password_ed"/>
+
+        <EditText
+            android:id="@+id/confirm_password_ed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="CONFIRM PASSWORD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserName_btn"
+            app:layout_constraintBottom_toTopOf="@+id/register_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="create account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_ed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

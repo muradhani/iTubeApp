@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authoraziationFragment">
+    <fragment
+        android:id="@+id/authoraziationFragment"
+        android:name="com.example.itubeapp.AuthoraziationFragment"
+        android:label="fragment_authoraziation"
+        tools:layout="@layout/fragment_authoraziation" >
+        <action
+            android:id="@+id/action_authoraziationFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_authoraziationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.itubeapp.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.itubeapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_videoWebViewFragment"
+            app:destination="@id/videoWebViewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playlistsFragment"
+            app:destination="@id/playlistsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.example.itubeapp.PlaylistsFragment"
+        android:label="fragment_playlists"
+        tools:layout="@layout/fragment_playlists" />
+    <fragment
+        android:id="@+id/videoWebViewFragment"
+        android:name="com.example.itubeapp.VideoWebViewFragment"
+        android:label="fragment_video_web_view"
+        tools:layout="@layout/fragment_video_web_view" />
+</navigation>

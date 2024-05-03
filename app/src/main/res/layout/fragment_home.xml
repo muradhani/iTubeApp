@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment"
+        android:layout_marginHorizontal="@dimen/_30sdp">
+
+        <EditText
+            android:id="@+id/edTextEPasswordLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Youtube URL"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/play_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="PLAY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edTextEPasswordLogin"
+            app:layout_constraintBottom_toTopOf="@+id/add_to_playList_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_to_playList_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ADD TOP PLAYLIST"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/play_btn"
+            app:layout_constraintBottom_toTopOf="@+id/my_play_list_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_play_list_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MY PLAYLIST"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_to_playList_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
