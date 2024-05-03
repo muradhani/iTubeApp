@@ -1,4 +1,4 @@
-package com.example.itubeapp;
+package com.example.itubeapp.ui.activities;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.itubeapp.R;
 import com.example.itubeapp.data.database.AppDatabase;
 import com.example.itubeapp.databinding.ActivityMainBinding;
 
